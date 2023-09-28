@@ -1,0 +1,10 @@
+@Library('github-jenkins-pipeline') _
+
+dockerBuildPipeline(
+        mainBranchCron: '@monthly',
+        imageBuilder: [
+                baseImage       : 'alpine',
+                registryRepoName: 'kartaltabak/python-with-jenkins-user',
+                imageTestCommand: 'python --help'
+        ]
+)
