@@ -3,7 +3,7 @@
 dockerBuildPipeline(
         mainBranchCron: '@monthly',
         imageBuilder: [
-                baseImage       : 'alpine',
+                baseImage       : 'python:3.11',
                 registryRepoName: 'kartaltabak/python-with-jenkins-user',
                 imageTestCommand: 'python --help'
         ]
